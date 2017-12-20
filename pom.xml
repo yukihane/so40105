@@ -43,5 +43,6 @@
     <module>hello-api</module>
     <module>hello-api-impl</module>
     <module>hoge-war</module>
+    <module>fuga-war</module>
   </modules>
 </project>
