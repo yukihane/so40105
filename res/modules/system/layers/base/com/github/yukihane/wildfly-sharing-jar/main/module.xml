@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="com.github.yukihane.wildfly-sharing-jar">
+   <resources>
+      <resource-root path="hello-api-0.0.1.jar" />
+      <resource-root path="hello-api-impl-0.0.1.jar" />
+   </resources>
+   <dependencies>
+      <module name="javax.enterprise.api" />
+   </dependencies>
+</module>
