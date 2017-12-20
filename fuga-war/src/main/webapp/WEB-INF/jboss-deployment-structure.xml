@@ -1,0 +1,7 @@
+<jboss-deployment-structure>
+  <deployment>
+    <dependencies>
+      <module name="com.github.yukihane.wildfly-sharing-jar" />
+    </dependencies>
+  </deployment>
+</jboss-deployment-structure>
