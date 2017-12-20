@@ -17,8 +17,23 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.enterprise</groupId>
+        <artifactId>cdi-api</artifactId>
+        <version>2.0</version>
+      </dependency>
+      <dependency>
         <groupId>com.github.yukihane.wildfly-sharing-jar</groupId>
         <artifactId>hello-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.yukihane.wildfly-sharing-jar</groupId>
+        <artifactId>hello-api-impl</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>
@@ -27,5 +42,6 @@
   <modules>
     <module>hello-api</module>
     <module>hello-api-impl</module>
+    <module>hoge-war</module>
   </modules>
 </project>
