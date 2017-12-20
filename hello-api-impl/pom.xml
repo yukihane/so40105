@@ -13,6 +13,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>javax.enterprise</groupId>
+      <artifactId>cdi-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>com.github.yukihane.wildfly-sharing-jar</groupId>
       <artifactId>hello-api</artifactId>
     </dependency>
