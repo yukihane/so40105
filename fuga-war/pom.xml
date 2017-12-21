@@ -38,5 +38,19 @@
 
   <build>
     <finalName>fuga</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Dependencies>com.github.yukihane.wildfly-sharing-jar</Dependencies>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
