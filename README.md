@@ -3,10 +3,16 @@
 [java - 複数のwarファイル間でクラスを共有したい - スタック・オーバーフロー](https://ja.stackoverflow.com/questions/40105/)
 に対するサンプル実装コード。
 
-# ビルド方法
+# 付与したタグの説明
 
-global module方式を試したいならタグ `tag/global-module`, `jboss-deployment-structure.xml`で制御するなら `tag/jboss-deployment-structure`を用いる。
-なお違いは `jboss-deployment-structure.xml`が含まれるか否かのみ。
+|タグ名|説明|
+|---|---|
+|`tag/fat-war`|依存`JAR`を`WAR`の中に含めている状態。(比較用。質問文中にある現状態。)|
+|`tag/global-module`|グローバルモジュールとしてロードする場合。|
+|`tag/jboss-deployment-structure`|`WAR`の中の`jboss-deployment-structure.xml`ファイルでロードするモジュールを指定する場合。(`tag/global-module`から見た差異は、当ファイルが含まれるか否かのみ。)|
+|`tag/manifest.mf`|`WAR`の中の`MANIFEST.MF`ファイルでロードするモジュールを指定する場合。(`tag/global-module`から見た差異は、`MANIFEST.MF`ファイルに`Dependencies:`セクションを追記するか否かのみ。)|
+
+# ビルド方法
 
 Mavenを導入した上で
 
@@ -30,7 +36,7 @@ Mavenを導入した上で
 
     $JBOSS_HOME/bin/standalone.sh
 
-http://localhost:8080/hoge/hoge
-http://localhost:8080/fuga/fuga
+- http://localhost:8080/hoge/hoge
+- http://localhost:8080/fuga/fuga
 
 でそれぞれの`WAR`で実装されたサーブレットにアクセスできる。
