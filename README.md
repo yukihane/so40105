@@ -20,13 +20,18 @@ Mavenを導入した上で
 
 # デプロイ
 
-`hello-api/target/hello-api-0.0.1.jar`, `hello-api-impl/target/hello-api-impl-0.0.1.jar`, `res/modules/system/layers/base/com/github/yukihane/wildfly-sharing-jar/main/module.xml`
-の3ファイルは
+以下の3ファイルは
 `$JBOSS_HOME/modules/system/layers/base/com/github/yukihane/wildfly-sharing-jar/main/`
 にコピーする。
 
-`hoge-war/target/hoge.war`, `fuga-war/target/fuga.war` の2ファイルは
-`$JBOSS_HOME/standalone/deployments` にコピーする。
+- `hello-api/target/hello-api-0.0.1.jar`
+- `hello-api-impl/target/hello-api-impl-0.0.1.jar`
+- `res/modules/system/layers/base/com/github/yukihane/wildfly-sharing-jar/main/module.xml`
+
+以下の2ファイルは`$JBOSS_HOME/standalone/deployments` にコピーする。
+
+- `hoge-war/target/hoge.war`
+- `fuga-war/target/fuga.war`
 
 加えて、global moduleとして本モジュールを登録する場合は
 `$JBOSS_HOME/standalone/configuration/standalone.xml` に
